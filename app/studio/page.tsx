@@ -1,4 +1,3 @@
-import { Video } from "lucide-react";
 import Image from "next/image";
 import React from "react";
 import VideoCarousel from "./_components/video-carousel";
@@ -8,6 +7,7 @@ function page() {
     <section className=" min-h-screen  w-full pt-[50px]   ">
       <div className="flex items-center justify-center w-full xl:max-w-7xl xl:mx-auto">
         <Image
+          unoptimized
           src="/images/banner-grey.png"
           width={1000}
           height={1000}
