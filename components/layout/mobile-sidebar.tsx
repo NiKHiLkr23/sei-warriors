@@ -19,7 +19,7 @@ export function MobileSidebar({ className }: SidebarProps) {
     <>
       <Sheet open={open} onOpenChange={setOpen}>
         <SheetTrigger asChild>
-          <MenuIcon className="bg-[" />
+          <MenuIcon className=" w-10 h-10 " />
         </SheetTrigger>
         <SheetContent side="left" className="!px-0">
           <h2 className="mb-2 px-4 text-3xl font-semibold tracking-tight">

@@ -2,9 +2,15 @@ import Image from "next/image";
 import React from "react";
 import VideoCarousel from "./_components/video-carousel";
 
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Studio",
+};
+
 function page() {
   return (
-    <section className=" min-h-screen  w-full pt-[50px]   ">
+    <section className=" min-h-screen  w-full lg:pt-[56px]    ">
       <div className="flex items-center justify-center w-full xl:max-w-7xl xl:mx-auto">
         <Image
           unoptimized

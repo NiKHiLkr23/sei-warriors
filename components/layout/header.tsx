@@ -6,16 +6,26 @@ import { useTheme } from "next-themes";
 import { MobileSidebar } from "./mobile-sidebar";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import useScroll from "@/lib/hooks/use-scroll";
 
 export default function Header() {
   const pathname = usePathname();
-
+  const scrolled = useScroll(50);
   return (
     <div
-      className="fixed top-0 left-0 right-0 
-      bg-transparent z-20 "
+      className={cn(
+        `fixed top-0 left-0 right-0 
+      bg-transparent  z-30 `,
+        scrolled
+          ? ""
+          : ` ${
+              ["/studio", "/collection"].includes(pathname)
+                ? "lg:shadow-md"
+                : ""
+            } lg:backdrop-blur-xl`
+      )}
     >
-      <nav className="h-14 flex items-center justify-between lg:justify-start px-4 max-w-7xl mx-auto">
+      <nav className="h-14 flex items-center justify-between lg:justify-start px-4 max-w-7xl mx-auto  ">
         <div className="mt-7 md:mt-10">
           <Link href="/" prefetch={false} className="mt-10">
             <span className="sr-only">Sei Warriors</span>
@@ -64,7 +74,7 @@ export default function Header() {
             </Link>
           </div>
         </div>
-        <div className={cn("block lg:!hidden")}>
+        <div className={cn("block lg:!hidden pt-2")}>
           <MobileSidebar />
         </div>
       </nav>

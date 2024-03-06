@@ -74,3 +74,31 @@
     @apply bg-background text-foreground;
   }
 }
+
+
+.custom-gradient {
+  position: relative;
+  background-image: repeating-linear-gradient(
+    to right,
+    #c03540,
+    #ffa047,
+    #c03540
+  );
+  z-index: 1;
+  background-position-x: 0%;
+  background-size: 200%;
+  animation: gradimate 3s linear infinite;
+  background-clip: text;
+}
+
+@keyframes gradimate {
+  0% {
+    background-position-x: 0%;
+  }
+  50% {
+    background-position-x: 100%;
+  }
+  100% {
+    background-position-x: 200%;
+  }
+}

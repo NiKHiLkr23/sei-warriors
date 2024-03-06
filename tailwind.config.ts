@@ -74,6 +74,7 @@ const config = {
       },
       backgroundImage: {
         bgHeroPrimary: "url('/images/banner-red.png')",
+        bgHeroPrimaryMobile: "url('/images/banner-mobile.jpg')",
       },
     },
   },
